@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/card_one"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uuid_txt"/>
+        <TextView
+            android:id="@+id/uuid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/card_one"
+            android:paddingLeft="30sp"
+            android:textSize="10sp"
+            android:text="Hello" />
+        <TextView
+            android:id="@+id/card_two"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@id/card_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/major_txt"/>
+        <TextView
+            android:id="@+id/major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/card_one"
+            android:paddingLeft="30sp"
+            android:layout_below="@id/card_one"
+            android:textSize="10sp"
+            android:text="Major" />
+        <TextView
+            android:id="@+id/card_three"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_below="@id/card_two"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minor_txt"/>
+        <TextView
+            android:id="@+id/minor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/card_one"
+            android:paddingLeft="30sp"
+            android:textSize="10sp"
+            android:layout_below="@id/card_two"
+            android:text="Minor" />
+        <TextView
+            android:id="@+id/card_four"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_below="@id/card_three"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rssi_txt"/>
+        <TextView
+            android:id="@+id/rssi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/card_one"
+            android:paddingLeft="30sp"
+            android:textSize="10sp"
+            android:layout_below="@id/card_three"
+            android:text="RSSI" />
+    </RelativeLayout>
+</LinearLayout>

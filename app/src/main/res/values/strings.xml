@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BeaconsLocalisation</string>
+    <string name="uuid_txt">UUID :</string>
+    <string name="major_txt">Major :</string>
+    <string name="minor_txt">Minor :</string>
+    <string name="rssi_txt">RSSI :</string>
+    <string name="distance_txt">Distance :</string>
+    <string name="scanning_button">Scanning</string>
+    <string name="stopScanning_button">Stop Scanning</string>
+    <string name="save_button">Save</string>
+    <string name="sentence_result">You are in the area : </string>
+</resources>
