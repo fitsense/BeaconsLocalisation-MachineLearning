@@ -113,7 +113,6 @@ public class Data2 extends Activity implements BeaconConsumer {
         //if it does not, then creating it
         if (!myDir.exists()) {
             myDir.mkdirs();
-            Log.i(TAG, "Creation du repertoire");
         }
         Log.i(TAG, "Existence du dossier : " + myDir.exists());
 
@@ -123,7 +122,6 @@ public class Data2 extends Activity implements BeaconConsumer {
             try {
                 myFile.createNewFile();
                 writeLineInFile(myFile,"Beacon_1,Beacon_2,Beacon_3,Beacon_4,Area\n");
-                Log.i(TAG, "Creation du fichier");
             } catch (IOException e) {
                 Log.e(TAG, "ERROR :" + e.getMessage());
             }
@@ -211,8 +209,6 @@ public class Data2 extends Activity implements BeaconConsumer {
                 }
                 line+=x.getText()+","+y.getText();
                 line+="\n";
-                Log.i(TAG, "Ligne ajoutee :"+line);
-
 
                 writeLineInFile(myFile, line);
             }
@@ -238,13 +234,11 @@ public class Data2 extends Activity implements BeaconConsumer {
                         myFile.delete();
                         myFile.createNewFile();
                         writeLineInFile(myFile,"Beacon_1,Beacon_2,Beacon_3,Beacon_4,Area\n");
-                        Log.i(TAG, "Creation du fichier");
                     } catch (IOException e) {
                         Log.e(TAG, "ERROR :" + e.getMessage());
                     }
 
                 }
-                Log.i(TAG, "Existence du fichier : " + myFile.exists());
             }
         });
 
@@ -272,7 +266,7 @@ public class Data2 extends Activity implements BeaconConsumer {
                 //for (ArrayList<String> key:keys){
                 //    beaconsList.replace(key,0);
                 //}
-                Log.i(TAG, "Activite courante :" + this.toString());
+                Log.i(TAG, "Current activity :" + this.toString());
 
                 //If Beacon is detected then size of collection is > 0
                 if (beacons.size() > 0) {
@@ -324,11 +318,8 @@ public class Data2 extends Activity implements BeaconConsumer {
         try {
             //writing in the file
             fOut = new FileOutputStream(file, true);
-            Log.i(TAG, " Fichier ouvert");
             fOut.write(line.getBytes());
-            Log.i(TAG, "Ligne ajoutee");
             fOut.close();
-            Log.i(TAG, "Fichier ferme");
         } catch (IOException e) {
             Log.e(TAG, "ERROR : " + e.getMessage());
         }

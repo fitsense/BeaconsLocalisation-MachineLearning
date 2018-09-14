@@ -247,7 +247,7 @@ public class Localisation3 extends Activity implements BeaconConsumer {
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
 
-                Log.i(TAG, "Activite courante : " + this.toString());
+                Log.i(TAG, "Current activity : " + this.toString());
 
                 //Updating the hashtable
                 if (beacons.size() > 0) {

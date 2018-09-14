@@ -161,7 +161,7 @@ public class Beacons extends Activity implements BeaconConsumer {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
-                Log.i(TAG, "Activite courante :" + this.toString());
+                Log.i(TAG, "Current Activity : " + this.toString());
                 //If Beacon is detected then size of collection is > 0
                 if (beacons.size() > 0) {
                     // Iterating through all Beacons from Collection of Beacons

@@ -63,7 +63,7 @@ public class  Localisation2 extends Activity implements BeaconConsumer {
     //HashTable containing beacons' information
     //KEY : {UUID, Major, Minor}
     //VALUE : RSSI
-    Hashtable<ArrayList<String>, Integer> beaconsDictionnary;
+    Hashtable<ArrayList<String>, Integer> beaconsDictionnary; //same that BeaconsList
 
     //List of all the point registered in the file
     //INDEX 0 to N-2 : RSSI
@@ -319,7 +319,7 @@ public class  Localisation2 extends Activity implements BeaconConsumer {
 
     public void fillListReferences() {
         /*
-        This method fill the list listReference with the contents of the file referenceFile
+        This method fills the list listReference with the contents of the file referenceFile
          */
         FileReader fr;
         BufferedReader br;

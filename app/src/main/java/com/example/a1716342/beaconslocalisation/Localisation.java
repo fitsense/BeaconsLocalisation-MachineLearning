@@ -225,7 +225,7 @@ public class Localisation extends Activity implements BeaconConsumer {
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
 
-                Log.i(TAG, "Activite courante : " + this.toString());
+                Log.i(TAG, "Current activity : " + this.toString());
 
                 //Updating the hashtable
                 if (beacons.size() > 0) {
@@ -259,7 +259,7 @@ public class Localisation extends Activity implements BeaconConsumer {
                     }
                     switch (MODE) {
                         case 1:
-                            Log.i(TAG, "mode 1 : simple");
+                            Log.i(TAG, "mode 1");
                             //Creating the instance which will be gave to the model
                             instance = new DenseInstance(beaconsList.size() + 1);
                             instance.setDataset(data);
@@ -268,7 +268,7 @@ public class Localisation extends Activity implements BeaconConsumer {
                             }
                             break;
                         case 2:
-                            Log.i(TAG, "mode 2 : rssi average");
+                            Log.i(TAG, "mode 2");
                             //Getting the mean of the rssi
                             ArrayList<Double> mean;
                             if(rssiAverage.queueSize()>=rssiAverage.size()){
